@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/f720262d59.js" crossorigin="anonymous"></script>
+    
+        <style>
+        *{
+            font-family: 'Rubik';
+        
+
+        }
+      
+        head{
+            background-color: #F6F6F6;
+            background-blend-mode: color;
+            margin-top: 20px;
+            
+        }
+        .logo{
+            max-width: 149px;
+            height: 36.23px;
+            
+           
+        }
+        .signup{
+            width: 150px;
+            height: 45px;
+            padding:13px 0px 13px 0px;
+            overflow:visible;
+            background-color:white ;
+            color:#F53855;
+            border: 1px solid #F53855;
+            box-sizing: border-box;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            
+        }
+        .signin{
+            
+            overflow: hidden;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #0B132A;
+        }
+        li {
+            list-style: none;
+    
+        }
+        .topnav{
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            display:none;
+            
+        }
+        #myLinks{
+            display: block;
+        }
+        .navlist{
+            list-style: none;
+            padding:0px 15px 0px 10px;
+            float: left;
+            text-align: center;
+            
+        }
+        .listtext{
+            color: #4F5665;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+        
+        }
+        .listtext1,.listtext2{
+            display: none;
+            color: #4F5665;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18.96px;
+        }
+        .smalltext{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    
+    }
+        .icon{
+            display: none;
+        }
+        .intro{
+            width: 45vw;
+            height: 140px;
+            font-style:normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 70px;
+            color: #0B132A;
+    }
+    strong.lvpn{
+        
+            font-weight:900;
+            font-size: 50px;
+            line-height: 70px;
+            color: #0B132A;
+            
+    }
+
+
+    b.lvpn2{
+        font-weight:500;
+    }
+    .btn{
+    fill:#F53838;
+    background-color:#F53838;
+    color:white;
+    border-color:#F53838;
+    width: 250px;
+    height: 60px;
+    padding: 20px;
+    
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    }
+    
+    .rect{
+       
+        width: 250px;
+        height: 60px;
+
+
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(54px);
+    border-radius: 10px;
+    }
+    .shadow{
+        
+        height: 189.22px;
+
+        background: #0D1025;
+opacity: 0.06;
+filter: blur(114px);
+border-radius: 10px;
+    }
+    .mrow{
+       
+        width: 1000px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    .vertical {
+            border-right: 2px solid #EEEFF2;
+            height: 125.57px;
+        }
+    .usericon{
+ width:16.8px;
+ height:18px;
+ padding: 10px;
+    }
+    .icontext{
+    
+height: 30px;
+font-style: normal;
+font-weight: 900;
+font-size: 25px;
+line-height: 30px;
+color: #0B132A;
+    }
+    .icontext1{
+
+height: 30px;
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+
+color: #4F5665;
+    }
+    .container{
+        margin-left:160px;
+        margin-right: 10px;
+    padding:0;
+    
+
+    }
+    
+    .circle{
+        width: 55px;
+height: 55px;
+background: #FFECEC;
+border-radius: 60px;
+    }
+    .vpnman{
+        width:40vw;
+    }
+    .vpnman2{
+        width:40vw;
+    }
+    .featintro{
+    
+    
+    height: 100px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    
+    
+    color: #0B132A;
+    }
+    .feat{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4F5665;
+    
+    }
+   
+    .featlist{
+      font-size: 14px;
+      line-height: 30px;
+      padding: 20px;
+      font-weight: 500;
+      
+    }
+    .center{
+        text-align: center;
+        align-items:center;
+    }
+    .man2text{
+        padding-top:150px;
+        padding-left: 30px;
+        width:40vw;
+        
+
+    }
+    .choose{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    
+    
+    
+    color: #0B132A;
+    }
+    .price{
+        font-weight: 500;
+font-size: 25px;
+line-height: 30px;
+/* identical to box height, or 120% */
+
+text-align: center;
+
+color: #0B132A;
+    }
+    .plan{
+        color: #4F5665;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        
+    }
+    .active{
+        border-color: red;
+    }
+    .image{
+        width: 80vw;
+        max-height: 100%;
+    }
+    .select{
+            background-color:white ;
+            width: 177.88px;
+            height: 45px;
+            color:#F53855;
+            border: 2px solid #F53855;
+            box-sizing: border-box;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+
+    }
+    .button{
+    fill:#F53838;
+    background-color: #F53838;
+    border-radius: 10px;
+    color:white;
+    border-color: #F53838;
+    align-items: center;
+    justify-content: center;
+    }
+    .active .select{
+        background-color:#F53838;
+        color:white;
+    }
+    .border{
+    width: 350px;
+    height: 250px;
+
+
+    background: #FFFFFF;
+    border: 2px solid #F53838;
+    box-sizing: border-box;
+    border-radius: 10px;
+    }
+  
+
+#app {
+  
+  width: 180px;
+  height: 20px;
+
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.buttonpage {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 20px;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease width;
+}
+
+.buttonpage:last-child {
+  margin-right: 0;
+}
+
+.buttonpage.active {
+  width: 60px;
+  cursor: auto;
+  background-color: #F53855;
+}
+
+.name{
+font-weight: 700;
+font-size: 18px;
+line-height: 30px;
+}
+.product{
+    padding-left:100px;
+}
+
+
+    @media only screen and (max-width:900px){
+           
+            .container{
+                margin-left: 10px;
+                margin-right: 1px;
+                overflow: hidden;
+            
+
+            }
+            .product{
+                padding-left: 10px;
+            }
+            .getstbtn{
+                padding-left:50px;
+            }
+            .choose{
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    
+    
+    
+    color: #0B132A;
+
+    }
+    .lvpn{
+        
+        font-weight:500;
+        font-size: 26px;
+        line-height: 70px;
+        color: #0B132A;
+        
+}
+    .man2text{
+        width:90vw;
+    }
+ 
+        .listtext1,.listtext2{
+            display:inline;
+        }
+        .vertical{
+            border-right: none;
+        }
+        .signin,.signup{
+            display: none;
+        }
+        .icon{
+            display: block;
+            position: absolute;
+            margin-top: 10px;
+            top:0px;
+            right:6px;
+        
+        }
+                /* Style navigation menu links */
+        .topnav a {
+            padding: 10px 5px;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            float: none;
+            
+        }
+        .vpnman2{
+            padding-left:50px;
+            width:80vw;
+        }
+        
+       
+     
+  
+        .navlist{
+            float:none;
+        }
+        /* Add a grey background color on mouse-over */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+        .topnav {
+            overflow:hidden;
+            position: relative;
+            justify-content: left;
+
+        }
+
+
+        #myLinks{
+        display: none;
+        }
+        .intro
+            {
+            font-size: 25px;
+            width:95vw;
+            font-style: normal;
+            font-weight: 500;
+            
+            line-height: 40px;
+            }
+            .smalltext{
+            
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+                width:90vw;
+    
+            }
+            .vpnman{
+                padding-left:50px;
+                width:80vw;
+            }
+            .buttonpage{
+                display: none;
+            }
+            .lrow{
+                padding-left:30px;
+            }
+            .arrowcol{
+                display: none;
+            }
+            .card{
+                width: fit-content;
+                
+            }
+            .card-deck{
+                padding: 50px;
+            }
+            .border{
+                margin-left: 35px;
+                width: 300px;
+
+            }
+            
+          
+           
+        }
+        </style>
+        <div class="container" >
+            <div class="row" style="margin-top: 55px;">
+                <div class="col-1" style=" padding-top: 10px;">
+                    <img src="logo.png" class="logo" alt="Lasles VPN">  
+                    
+                </div>
+                <div class="col-8" style="padding-left: 180px;">
+                    <div class="topnav" id="myLinks" >
+                            <ul>
+                                <li class="navlist">
+                                    <a href="#" class="listtext1">Sign-In</a>
+                                </li>
+                                <li class="navlist">
+                                    <a href="#" class="listtext2">Sign-Up</a>
+                                </li>
+                                <li class="navlist">
+                                    <a href="#" class="listtext">About</a>
+                                </li>
+                                <li class="navlist">
+                                    <a href="#" class="listtext">Features</a>
+                                </li>
+                                <li class="navlist" >
+                                    <a href="#" class="listtext">Pricing</a>
+                                </li>
+                                <li class="navlist">
+                                    <a href="#" class="listtext">Testimonials</a>
+                                </li>
+                                <li class="navlist">
+                                    <a href="#" class="listtext">Help</a>
+                                </li>
+                                
+                            </ul>
+                    </div>
+                </div>
+                
+                <div class="col-1 colsignin" id="signinLink" style="padding-top: 12px;">
+                    <span class="signin">Sign-In</span>
+                </div>
+                <div class="col-1 colsignup" id="signupLink">
+                    <button class="signup">Sign-Up</button>
+                    <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
+                        <i class="fa fa-bars fa-2x" style="color:#F53855;"></i>
+                    </a>  
+                </div>
+                
+            </div>
+        </div>
+        
+    </head>
+    <body>
+        <div class="container" >
+            <div class="row" style="padding: 80px 0px 80px 0px">
+                <div class="col-sm-6" style="width:40vw;">
+                    <p class="intro">Want anything to be<br> easy with<strong class="lvpn"> LaslesVPN.</strong></p><br>
+                    <p class="smalltext">Provide a network for all your needs with ease and fun using<b> LaslesVPN</b> discover interesting features from us.</p>
+                    <br><br>
+                    <div class="getstbtn">
+                    <div class="btn" style="z-index:2"><b>Get Started</b></div>
+                    <div class="rect" style="z-index:1"></div>
+                    </div>
+                        
+                
+                    
+                   
+                </div>
+                <div class="col-sm-6" >
+                    <img class="vpnman" src="vpnman1.jpg" ></img>
+                </div>
+            </div>
+            <div class="row" style="background-color:#FFFFFF;width:80vw">
+                    <div class="col-sm-4 vertical"  style="padding: 30px 0px 30px 0px;">
+                        <div class="row" style="padding-left:80px">
+                            <div class="col-1" style="padding-left: 40px;">
+                                <div class="circle">
+                                    <img src="user.png" style="padding:18px;"></img>
+                                </div>
+                            </div>
+                            <div class="col-1" style="padding-left: 60px;">
+                                <p class="icontext">90+ <span class="icontext1">Users</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 vertical" style="padding: 30px 0px 30px 0px;">
+                        <div class="row" style="padding-left:80px">
+                            <div class="col-1" style="padding-left: 40px;">
+                                <div class="circle">
+                                    <img src="map.png" style="padding: 18px;padding-left: 19px;"></img>
+                                </div>
+                            </div>
+                            <div class="col-1" style="padding-left: 60px;">
+                                <p class="icontext">30+ <span class="icontext1">Locations</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 "  style="padding: 30px 0px 30px 0px;">
+                        <div class="row" style="padding-left:80px"  >
+                            <div class="col-1" style="padding-left:40px" >
+                                <div class="circle">
+                                    <img src="server.png" style="padding:15px;"></img>
+                                </div>
+                            </div>
+                            <div class="col-1" style="padding-left: 60px;">
+                                <p class="icontext">50+ <span class="icontext1">Servers</span></p>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+            <div class="row" style="padding:80px 0px 80px 0px;" >
+                <div class="col-sm-6 " style="padding:40px 0px 40px 0px;">
+                    <img class="vpnman2" src="vpnman2.jpg">
+                </div>
+                <div class="col-sm-6 man2text"  >
+                    <span class="featintro">We Provide Many Features<br>You Can Use</span>
+                    <br><br>
+                
+                    <p class="featexp">You can explore the features that we provide with fun and<br> have their own functions each feature.</p>
+                    <ul class="featlist">
+                        <li><i class="fa-solid fa-circle-check" style="color:green"></i> Powerful online protection</li>
+                        <li><i class="fa-solid fa-circle-check" style="color:green"></i> Internet without borders</li>
+                        <li><i class="fa-solid fa-circle-check" style="color:green"></i> Supercharged VPN </li>
+                        <li><i class="fa-solid fa-circle-check" style="color:green"></i> No specific time limits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="background-color: #F6F6F6">
+            <div class="row" >
+                <div class="col-12 center">
+                    <p class="choose" >Choose Your Plan</p>
+                    <p class="smalltext">Let's choose the package that is best for you and explore it happily and <br>cheerfully.</p>
+                </div>
+            </div>
+        
+
+                <div class="card-deck">
+                    <div class="col-md-4 col-12 card">
+                        <div class="card-body text-center">
+                                <img src="Free.jpg" alt="Free Plan" style="padding: 20px;">
+                                <p class="card-text"><b>Free Plan</b></p>
+                                <ul class="plan">
+                                    <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Unlimited Bandwidth</li>
+                                    <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Encrypted Connection</li>
+                                    <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  No Traffic Logs      </li>
+                                    <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Works On All Devices</li>
+                                    
+                                </ul>
+                                <br><br><br>
+                                
+                                <p class="price"><b>Free</b></p>
+                                <button class="select">Select</button>
+                                
+                        </div>
+                    </div>
+                    <div class="col-md-4 card">
+                        <div class="card-body text-center">
+                            <img src="Free.jpg" alt="Standard Plan" style="padding: 20px;">
+                            <p class="card-text"><b>Standard Plan</b></p>
+                            <ul class="plan">
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Unlimited Bandwidth</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Encrypted Connection</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Yes Traffic Logs      </li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Works On All Devices</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Connect Anywhere</li>
+
+                            </ul>
+                            <br><br>
+                            
+                            <p class="price"><b>$9</b>/mo</p>
+                            <button class="select">Select</button>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 card active">
+                        <div class="card-body text-center ">
+                            <img src="Free.jpg" alt="Premium Plan" style="padding: 20px;">
+                            <p class="card-text"><b>Premium Plan</b></p>
+                            <ul class="plan">
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Unlimited Bandwidth</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Encrypted Connection</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Yes Traffic Logs      </li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Works On All Devices</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Connect Anywhere</li>
+                                <li style="text-align:left"><i class="fa-solid fa-check" style="color:green"></i>  Get New Features</li>
+                            </ul>
+                            <br>
+                            
+                                
+                                <p class="price"><b>$12</b>/mo</p>
+                                <button class="select">Select</button>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            
+        
+        
+            <div class="row" style="padding-top:60px">
+                <div class="col-12 center" >
+                    <p class="choose">Huge Global Network <br>of Fast VPN</p><br>
+                    <p class="smalltext">See <strong>Lasles VPN</strong> everywhere to make it easier for you when you move locations.</p>
+                </div>
+            </div>
+            <br><br><br>
+        
+            <div class="row">
+                <div class="col-12 center" >
+                    <img src="Vector.png" class="image"></img>
+                    <img src="Sponsored.jpg" class="image"></img>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-12 center " >
+                    <p class="choose">Trusted by Thousands of <br>Happy Customer</p><br>
+                    <p class="smalltext">These are the stories of our customers who have joined us with great<br> pleasure when using this crazy feature.</p>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 40px;">
+                <div class="col-md-4">
+                    <div class="media border">
+                        <img src="commentfirst.jpg" alt="John Doe" class="mr-3 mt-3">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="name" style="padding-top:10px">Viezh Robert </p>
+                                    <p class="place">Warsaw,Poland</p>
+                                </div>
+                                <div class="col-4">
+                                    <p style="text-align:right;padding-top:22px">4.5 <i class="fa-solid fa-star" style="color:gold"></i></p>
+                                </div>
+                            </div>
+                            <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.<br><br></p>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media border p-3">
+                        <img src="comment2.jpg" class="mr-3 mt-3">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="name" style="padding-top:10px"> Yessica Christy</p>
+                                    <p class="place">Shanxi,China</p>
+
+                                </div>
+                                <div class="col-4">
+                                    <p style="text-align:right">4.5 <i class="fa-solid fa-star" style="color:gold"></i></p>
+                                </div>
+                            </div>
+                                <p>“I like it because I like to travel far and still can connect with high speed.”.
+                            </p>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="media border p-3 " style="border-radius: 5px;">
+                        <img src="comment1.jpg" class="mr-3 mt-3">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="name" style="padding-top:10px">Kim Young Jou</p>
+                                    <p class="place">Seoul,South Korea</p>    
+                                </div>
+                                <div class="col-4">
+                                    <p style="text-align:right">4.5 <i class="fa-solid fa-star" style="color:gold"></i></p>
+                                </div>
+                        </div>
+                            <p>“This is very unusual for my business that currently requires a virtual private network that has high security.”.</p>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top:40px">
+                <div class="col-sm-10">
+                    <div id="app">
+                        <div class="buttonpage active"></div>
+                        <div class="buttonpage"></div>
+                        <div class="buttonpage"></div>
+                        <div class="buttonpage"></div>
+                      </div>
+                </div>
+                <div class="col-sm-2 arrowcol" >
+                        <a href="#"><i class="fa-solid fa-circle-arrow-left" style="color:#FFFFFF;background-color:#F53838;font-size:xx-large;border-radius:45px;border-color: #F53838;"></i> </a>
+                        <a href="#">  <i class="fa-solid fa-circle-arrow-right" style="color:red;font-size:xx-large;border-radius: 45px;"></i></a>
+                </div>
+            </div>
+            <div class="row" style="padding:40px;">
+                <div class="col-md-6 center">
+                    <p class="choose">Subscribe now to<br> get special features</p>
+                    <p class="smalltext">Let's subscribe with us and find the fun</p>
+
+                </div>
+                <div class="col-md-6 center" style="padding:30px">
+                    <div class="btn" style="z-index:2"><b>Subscribe now</b></div>
+                    <div class="rect" style="z-index:1"></div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="row lrow" >
+                        <img src="logo.png" height="35px" alt="Lasles VPN"> 
+                    </div>
+                    <div class="row lrow">
+                        <br><p><strong>LaslesVPN</strong>is a private virtual network that<br> has unique features and has hig security</p><br>
+                    </div>
+                    <div class="row lrow">
+                        <div class="col-sm-3">
+                            <div class="row" style="flex-wrap:nowrap;">
+                                <div class="col-xs-1">
+                                <img src="Facebook.png">
+                                </div>
+                                <div class="col-xs-1">
+                                <img src="Instagram.png">
+                                </div>
+                                <div class="col-xs-1">
+                                <img src="Twitter.png">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 product" >
+                    <ul><li><b> Product</b></li>
+                        <li>Download</li>
+                        <li>Pricing</li>
+                        <li>Locations</li>
+                        <li>Server</li>
+                        <li>Countries</li>
+                        <li>Blog</li>
+                    </ul>
+                    
+                </div>
+                <div class="col-xs-2" style="padding-left:80px;">
+                    <ul><li><b> Engage</b></li>
+                        <li>LaslesVPN</li>
+                        <li>FAQ</li>
+                        <li>Tutorials</li>
+                        <li>About Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                    </ul>
+                </div>
+                <div class="col-xs-2" style="padding-left:80px;">
+                    <ul><li><b> Earn Money</b></li>
+                        <li>Affiliate</li>
+                        <li>Become Partner</li>
+                        
+                    </ul>
+                </div>
+              
+            </div>
+        </div>
+    
+        </div>
+    
+        
+        
+        
+        <script>
+            function loadMenu(){
+                var x = document.getElementById("myLinks");
+                if (x.style.display =="block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            };
+        </script>
+    </body>
+</html>
+
+                            
+                        
+                        
